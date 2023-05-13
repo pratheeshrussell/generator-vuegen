@@ -1,0 +1,56 @@
+
+<section class="login-component">
+  <div class="center">
+    <div class="sub-heading">
+      <p>This is a dummy login page</p>
+      <p>Use username <b>atuny0</b> and password <b>9uQFF1Lh</b></p>
+    </div>
+  <% if(formPackage === 'formkit') { %>
+    <FormKit type="form" submit-label="Login"  @submit="submitHandler">
+      <FormKit
+        type="text"
+        name="username"
+        :label="getUsernameText"
+      />
+      <FormKit
+        type="password"
+        name="password"
+        :label="getPasswordText"
+      />
+    </FormKit>
+  <% } else if(formPackage === 'veevalidate') { %>
+    <Form @submit="submitHandler">
+      <div class="container">
+        <div>
+          <label for="username"><b>{{getUsernameText}}</b></label>
+          <Field name="username" type="text" :rules="validateUsername" />
+        </div>
+        <div>
+          <label for="psw"><b>{{getPasswordText}}</b></label>
+          <Field name="password" type="password" :rules="validatePassword" />
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </div>
+    </Form>
+  <% } else { %>
+    <form @submit.prevent="submitHandler">
+      <div class="container">
+        <div>
+          <label for="username"><b>{{getUsernameText}}</b></label>
+          <input type="text" name="username" required>
+        </div>
+        <div>
+          <label for="psw"><b>{{getPasswordText}}</b></label>
+          <input type="password" name="password" required>
+        </div>
+        <div>
+          <button type="submit">Login</button>
+        </div>
+      </div>
+    </form>
+  <% } %>
+  </div>
+</section>
+

@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "extends": [
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/eslint-config-typescript",
+    "@vue/eslint-config-prettier"
+  ],
+  "plugins": ["simple-import-sort"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "parser": "@typescript-eslint/parser"
+  },
+  "rules": {
+    // override/add rules settings here, such as:
+    // 'vue/no-unused-vars': 'error'
+    // "vue/html-self-closing":"off"
+    "no-unused-vars": "warn",
+    "simple-import-sort/imports": "off",
+    "vue/match-component-file-name": [
+      "error",
+      {
+        "extensions": ["vue"],
+        "shouldMatchCase": true
+      }
+    ]
+  },
+  "ignorePatterns": ["vite-env.d.ts"]
+}

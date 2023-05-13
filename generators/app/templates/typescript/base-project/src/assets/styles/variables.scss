@@ -1,0 +1,18 @@
+// This file is included globally using vite.config.js
+
+// Palette colors
+$palette-colors: (
+  'primary': #4980f6,
+  'secondary': #7e7e7e,
+  'success': #008414,
+  'error': #de0303,
+  'warning': #ebc005,
+);
+
+// Body
+$body-background: #ffffff;
+$body-font-color: #343333;
+$body-font-secondary-color: #ffffff;
+
+// Components
+$card-shadow-color: #898989;

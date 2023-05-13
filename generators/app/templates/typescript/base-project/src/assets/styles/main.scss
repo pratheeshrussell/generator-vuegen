@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  background: $body-background;
+  font-family: $font-montserrat;
+  color: $body-font-color;
+  height:100vh;
+}
+
+a {
+  color: map-get($palette-colors, 'primary');
+  &:hover {
+    color: darken(map-get($palette-colors, 'primary'), 20);
+  }
+}
+
+
+.full-height {
+  height:100%;
+}
