@@ -7,8 +7,13 @@ First, install [Yeoman](http://yeoman.io) and generator-vuegen using [npm](https
 
 ```bash
 npm install -g yo
+npm install -g generator-vuegen
+```
+or install the generator from the repo
+```bash
 npm install -g git+https://github.com/pratheeshrussell/generator-vuegen.git
 ```
+
 
 Then generate your new project:
 
